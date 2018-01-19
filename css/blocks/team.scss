@@ -1,0 +1,117 @@
+.team {
+  background: url("../img/team-pic/bg-team.png") 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team__section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba(#2f3234, .93%);
+  padding: 0 95px 0 75px ;
+}
+
+.section__title__team {
+  margin-bottom: 12%;
+  color: $yellow;
+  font-size: 72px;
+  font-family: 'gagalinregular';
+  padding-top: 60px;
+}
+
+
+.team-acco__item {
+  margin-bottom: 40px;
+}
+
+.team-acco__item_active {
+    .team-acco__content {
+      display: block;
+    }
+    .team-acco__trigger {
+      color: $yellow;
+
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+}
+
+.team-acco__trigger {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  font-family: 'gagalinregular';
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -19px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid $yellow;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0px solid transparent;
+    transform: rotate(0deg);
+    transition: .3s;
+  }
+}
+
+.team-acco__content {
+  padding-top: 14px;
+  display: block;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+.team-acco__pic {
+  float: left;
+  text-align: center;
+  width: 29%;
+  margin-right:2%;
+}
+
+.team-acco__img {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.team-acco__text {
+  float: left;
+  width: 69%;
+}
+
+.team-acco__tile {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 14px;
+  font-family: 'ubuntubold';
+}
+
+.team-acco__text-content {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'ubuntulight';
+}
+
+
+

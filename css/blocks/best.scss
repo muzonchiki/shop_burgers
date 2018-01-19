@@ -1,0 +1,59 @@
+.best {
+  background: url("../img/best-pic/bg-best.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.best .container {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.best__section__title {
+  margin-bottom: 80px;
+  color: $black;
+  font-size: 72px;
+  font-family: 'gagalinregular';
+}
+
+.best__list {
+  font-size: 0;
+}
+
+.best__list * {
+  font-size: 14px;
+}
+
+.best__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+}
+
+.best__icon {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+}
+
+.best__icon-pic {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.best__title {
+  font-size: 24px;
+  color: $black;
+  margin-bottom: 20px;
+  font-family: 'lifehackmedium';
+}
+
+.best__text {
+  font-family: 'ubuntulight';
+  font-size: 14px;
+  line-height: 24px;
+}

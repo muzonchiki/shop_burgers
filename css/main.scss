@@ -1,0 +1,26 @@
+// colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+
+// setups
+@import "_misc/fonts";
+@import "_misc/layout";
+@import "_misc/normalize";
+
+
+// blocks
+@import "blocks/hero";
+@import "blocks/best";
+@import "blocks/burgers";
+@import "blocks/team";
+@import "blocks/menu";
+@import "blocks/reviews";
+@import "blocks/order";
+@import "blocks/map";
+@import "blocks/fixed-menu";
+
+//widgets
+@import "widgets/fancybox";

@@ -1,0 +1,62 @@
+.yandex-map {
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+.footer {
+  background: url("../img/map-pic/footer-bg.png") center bottom no-repeat;
+  height: 60px;
+  background-size: cover;
+  padding-top: 10px;
+}
+
+.footer__col {
+  float: left;
+  width: 50%;
+}
+
+.footer__col_right {
+  text-align: right;
+  padding-top: 9px;
+}
+
+.footer__address {
+  font-size: 14px;
+  color: #fff;
+  font-family: 'ubuntulight';
+}
+
+.footer__phone {
+  color: $red;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'ubuntubold';
+}
+
+.socials {
+  position: relative;
+  top: 50%;
+}
+
+.socials__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.socials__link {
+  display: inline-block;
+  max-width: 23px;
+  max-height: 20px;
+  opacity: .3;
+  transition: .3s;
+}
+
+.socials__link:hover {
+  opacity: 1;
+}
+
+.socials__link svg {
+  width: 100%;
+  height: 100%;
+}

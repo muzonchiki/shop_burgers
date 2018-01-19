@@ -1,0 +1,131 @@
+.hero {
+  background: url("../img/hero-pic/bg-hero.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero,
+.container {
+  position: static;
+}
+
+.header {
+  padding-top: 12px;
+}
+
+.header__left {
+  float: left;
+  width: 31%;
+}
+
+.header__right {
+  float: left;
+  width: 69%;
+  white-space: nowrap;
+  padding-top: 13px;
+}
+
+.nav {
+  display: inline-block;
+  vertical-align: middle;
+  width: 84%;
+}
+
+.nav__order {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15%;
+  margin-left: 1%;
+}
+
+.nav__list {
+  width: 100%;
+}
+
+.nav__item {
+  float: left;
+  display: block;
+  white-space: nowrap;
+  margin-right: 14px;
+}
+
+.nav__link {
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: 'ubuntumedium';
+
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.nav__item:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 15px;
+}
+
+.nav__item:last-child:after {
+  display: none;
+}
+
+.hero__container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.hero__left {
+  float: left;
+  width: 50%;
+}
+
+.hero__right {
+  float: right;
+  width:50%;
+ padding-top: 115px;
+}
+
+
+.hero__right__title {
+  color: $yellow;
+  font-size: 72px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-family: 'gagalinregular';
+}
+
+.hero__right__dsc {
+  color: #fff;
+  font-size: 62px;
+  text-transform: lowercase;
+  line-height: 1em;
+  font-family: 'lifehackmedium';
+}
+
+.down-arrow {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transition: .3s;
+}
+
+.down-arrow:hover {
+  transform: translate(0, -20px);
+}
+

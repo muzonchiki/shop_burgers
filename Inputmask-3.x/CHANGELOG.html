@@ -1,0 +1,454 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>CHANGELOG.md</title>
+      </head>
+      <body>
+        <h1 id="change-log">Change Log</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<h2 id="-unreleased-">[UNRELEASED]</h2>
+<h3 id="added">Added</h3>
+<h3 id="updates">Updates</h3>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>hasOwnProperty check missing in reverseTokens (numericInput) #1486</li>
+<li>Per-element radixPoint overwrites defaults #1454</li>
+<li>Form not cleaning correctly when AutoUnmask option is set to true #1442</li>
+<li>Form can`t submitted with input[name=disabled] #1473</li>
+</ul>
+<h2 id="-3-3-4-2016-12-22-">[3.3.4 - 2016-12-22]</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>extra extension points: analyseMask</li>
+<li>colorMask option ~ css styleable mask</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>remove tooltip option</li>
+<li>remove h,s,d,m,y definitions =&gt; use the date/time aliases</li>
+<li>phone-alias - fine-tune mask sorting</li>
+<li>make data-inputmask attribute naming configurable (dataAttribute on Inputmask)</li>
+<li>numeric alias move negation symbols to the edges</li>
+<li>handle android predictive text enabled</li>
+<li>rename js/inputmask.dependencyLib.jquery.js to js/inputmask.dependencyLib.js</li>
+<li>rename dist/inputmask.dependencyLib.jquery.js to dist/inputmask.dependencyLib.js</li>
+<li>commonjs dep to inputmask.dependencyLib instead to inputmask.dependencyLib.jquery =&gt; can be symlinked to another dependencyLib</li>
+<li>improve inputfallback (Android support)</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>IE11 : SCRIPT438: Object doesn&#39;t support property or method &#39;isFinite&#39; #1472</li>
+<li>() as literal followed by an optional, doubles the optional template #1453</li>
+<li>Decimal mask excluding zero with custom RadixPoint and GroupSeparator #1418</li>
+<li>Can&#39;t remove dot from the middle of a word #1439</li>
+<li>Invalid Leap Year dates can be entered #1368</li>
+<li>jquery.val returns empty value (when using an unsupported input type) #1415</li>
+<li>Losing the decimal part when the maximum number of digits is reached #1257</li>
+<li>Not allowing to change existing number to 0 #1381</li>
+<li>Numbers get swapped when cursor near suffix. #1278</li>
+<li>androidHack: Caret positioning needs some fine tuning #1412</li>
+<li>How can I get &quot;-$123.45&quot;, not &quot;$-123.45&quot;? #1360</li>
+<li>Placeholder color #972</li>
+<li>Other color on placeholder (wrap placeholder in span, using contenteditable?) #873</li>
+<li>Error on 3.3.3: Uncaught TypeError: Cannot set property &#39;generatedInput&#39; of undefined #1399</li>
+<li>ios 8, safari, on first visit unable to enter any characters #826</li>
+<li>Numerica mask not run in Galaxy S5 + Chrome + Android #1357</li>
+</ul>
+<h2 id="-3-3-3-2016-09-09-hotfix">[3.3.3 - 2016-09-09] - hotfix</h2>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>revert moving jquery dependencyLib</li>
+<li>correct caret positioning - radixFocus &amp; placeholder: &quot;&quot;</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Build failure in heroku after release of 3.3.2 #1384</li>
+<li>Error with inputMask any case (v3.3.2) #1383</li>
+</ul>
+<h2 id="-3-3-2-2016-09-09-">[3.3.2 - 2016-09-09]</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>mask-level casing =&gt; #1352</li>
+<li>&#39;casing&#39;: &#39;title&#39; #1277</li>
+<li>add quantifier syntax for digits option in numeric alias. #1374</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>add bundle in nuget package</li>
+<li>change default of positionCaretOnTab to true</li>
+<li>include min files in nuspecs</li>
+<li>better filter for input targets in inputmask.binder.js</li>
+<li>improve alternation selection</li>
+<li>removed nojumps option</li>
+<li>update phone alias implementation<ul>
+<li>add unit tests for phonecodes</li>
+</ul>
+</li>
+<li>replaced radixFocus option by positionCaretOnClick.  Allows choice for behavior of the caret on click. (none, lvp (default), radixFocus)</li>
+<li>performance updates<ul>
+<li>getmasklength</li>
+<li>use selective caching in getTests</li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Problems with greedy dynamic masks in current version 3.x #1375</li>
+<li>Croatian phone mask only supports city of Zagreb #1359</li>
+<li>Pasting to masked input not working on Android #1061</li>
+<li>Unable to get property &#39;forwardPosition&#39; of undefined or null reference IE11 #1342</li>
+<li>Input event doesn&#39;t fire in IE #1287</li>
+<li>Dynamically changing mask based on number of entered characters #1336</li>
+<li>change addEventListener not fired in IE11 #1310 - inputmask.dependencyLib.js</li>
+<li>Hide mask&#39;s items that have multiple options #678</li>
+<li>Bug when typing after a fixed character #1299</li>
+<li>onUnMask is not being called #1291</li>
+<li>How Can I have caret position on decimal digit(after decimal point) for currency inputmask ? #1282</li>
+<li>How to implement mask for these numbers? #840 (alternator)</li>
+<li>&#39;setvalue&#39; on mask with a suffix results in suffix being doubled, while <code>$.fn.val</code> works fine #1267</li>
+</ul>
+<h2 id="-3-3-1-2016-04-20">[3.3.1] - 2016-04-20</h2>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>better handle alternator logic by merging the locators</li>
+<li>patchValueProperty - enable native value property patch on IE8/IE9</li>
+<li>speedup insert and delete from characters</li>
+<li>adding extra options through option method =&gt; auto apply the mask + add noremask option</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Safari date mask - Context switch when jquery.valhook fallback is used #1255</li>
+<li>Email alias <em>@</em> =&gt; <em>@</em>._ #1245</li>
+<li>Safari Error: RangeError: Maximum call stack size exceeded #1241</li>
+<li>Safari Maximum call stack size exceeded when inputmask bound twice #1226</li>
+</ul>
+<h2 id="-3-3-0-2016-04-05">[3.3.0] - 2016-04-05</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>nullable option =&gt; switch to return the placeholder or null when nothing is entered</li>
+<li>VIN mask #1199</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>also escape []{}() in the prefix and suffix for decimals</li>
+<li>Can not change integer part when it is &quot;0&quot; #1192</li>
+<li>change funtionality of postValidation =&gt; result may be true|false</li>
+<li>improve getmetadata</li>
+<li>patchValueProperty - enable native value property patch on IE10/IE11</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>PostValidation function fails when using placeholder and digitsOptional is false #1240</li>
+<li>min value issue #1177</li>
+<li>min value for decimal isn&#39;t working #1178</li>
+<li>InputMask remove a 0 in left side. (numericInput: true) #1238</li>
+<li>validate regular expression for indian vehicle registration number #1223</li>
+<li>Distinguish empty value and &#39;$ 0.00&#39; value for currency alias #1053</li>
+<li>&#39;alias&#39;: &#39;numeric&#39;, zero value #1221</li>
+<li>Clicking on a highlighted masked field does not set the caret to the first valid position (Chrome) #1218</li>
+<li>Caret Positioned After Last Decimal Digit Disallows Sign Input When digits Option Set #1139</li>
+<li>numeric alias produces &quot;0.00&quot; instead of null when cleared out. #902</li>
+<li>IE8 error: Object doesn&#39;t support this property or method #1217</li>
+<li>update negation handling for numeric alias</li>
+<li>NumericInput option can&#39;t handle 100.00 #1162</li>
+<li>&quot;0.00&quot; not displayed if &quot;clearMaskOnLostFocus: true&quot; #1171</li>
+<li>Lost zero while replacing a digit in group #1202</li>
+<li>RadixFocus problem #686</li>
+<li>Can not change integer part when it is &quot;0&quot; #1192</li>
+<li>&quot;[object Object]&quot; value after <code>$element.inputmask(&#39;setvalue&#39;, &#39;&#39;)</code> call #1208</li>
+<li>Paste does not work properly when using numericInput #1195</li>
+<li>error occurs in safari 9.0.3 (11601.4.4) #1191</li>
+<li>Can not clear value when select all and press BACKSPACE in some circumstance #1179</li>
+<li>Email mask incorrectly including underscore #868 =&gt; allowed as not typed =&gt; result invalid</li>
+<li>AutoUnmask not working on IE11 #1187</li>
+<li>Email mask not accepting valid emails #971</li>
+<li>Deleting character from input with &#39;email&#39; alias shifts all data #1052</li>
+<li>Fix some events like paste &amp; cut for Vanilla dependencyLib #1072</li>
+</ul>
+<h2 id="-3-2-7-2016-01-28">[3.2.7] - 2016-01-28</h2>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>favor inputfallback for android</li>
+<li>enable IEMobile</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Firefox, Android - cursor jumps to the left in numeric mask #1138</li>
+<li>Issue in Android (Samsung GALAXY S5) #825</li>
+<li>time mask, backspace behavior on android chrome #817</li>
+<li>Android Chrome Browser #867</li>
+<li>Mask issue in Android with Swype Keyboard #692</li>
+<li>Pasting to masked input not working on Android #1061</li>
+<li>Decimal point/comma not working on Android 4.4 #1041</li>
+<li>Doesn&#39;t work on Android #1073</li>
+<li>numeric input in mobile #897</li>
+<li>Support for Android default browser #368</li>
+<li>Repeating a character and a number On Mobile #898</li>
+<li>Inputs are ignored on FF 39 on Android 5.0.2 #982</li>
+<li>Phone input mask duplicates each character on Samsung Android tablet #834</li>
+<li>Support for Android default browser #368</li>
+<li>fixed &quot;valids is not defined&quot; error #1166</li>
+</ul>
+<h2 id="-3-2-6-2016-01-25">[3.2.6] - 2016-01-25</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>add jitMasking option</li>
+<li>supportsInputType option</li>
+<li>staticDefinitionSymbol (see readme)</li>
+<li>include textarea as a valid masking element</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>enhance inputfallback ~ merge mobileinputevent</li>
+<li>caching with cache-dependency check in the getTests fn</li>
+<li>implement missing parts in the jqlite DependencyLib</li>
+<li>Remove namespaces for events (simplifies implementing other dependencyLibs, besides jquery)</li>
+<li>update alternation logic</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Windows Phone User unable to set Date #993</li>
+<li>&#39;405 not allowed&#39; error on loading phone-codes.js on certain Ajax configuration. #1156</li>
+<li>Issue with reset of inputmask field #1157</li>
+<li>IE11 clear not working in emulated IE9 mode #1144</li>
+<li>Show placeholder as user types #1141</li>
+<li>Initial value like VAA gets truncated to V-__ with mask like &quot;I{1,3}-ZZ&quot; #1134</li>
+<li>Input mask can&#39;t be applied on other HTML5 input types #828</li>
+<li>IE9 SCRIPT445: Object does not support this action #1135</li>
+<li>Multiple Mask Click Focus Error #1133</li>
+<li>Double enter for submit #1131</li>
+<li>Multiple masks #760</li>
+<li>Cursor shifted to the RIGHT align any way. #1088</li>
+<li>No-strict mask #1084</li>
+<li>Inputmask not work with textarea #1128</li>
+</ul>
+<h2 id="-3-2-5-2015-11-27">[3.2.5] - 2015-11-27</h2>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>improve cursor positioning and placeholder handling</li>
+<li>remove $(&quot;selector&quot;).inputmask(&quot;mask&quot;, { mask: &quot;99-999 ...&quot; }) format from plugin</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Currency validator gives false negative if number of digits in integer part is not multiplier of groupSize #1122</li>
+<li>data-inputmask =&gt; mask with optionals not parsed correctly #1119</li>
+<li>Email mask doesn&#39;t allow to go to the domain part by mouse #885</li>
+<li>alias options from &#39;data-inputmask&#39; is not used anymore #1113</li>
+<li>Numeric extensions don&#39;t supported with vanilla DependencyLib #1116</li>
+</ul>
+<h2 id="-3-2-4-2015-11-20">[3.2.4] - 2015-11-20</h2>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>allow passing an element id to the mask function</li>
+<li>allow passing a selector to the mask function</li>
+<li>fix for bower package</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>get the pressed key onKeyValidation #1114</li>
+<li>write a global function for onKeyValidation #1111 =&gt; update readme</li>
+<li>NumericInput Causes err #856</li>
+<li>Certain phones not inputable #758</li>
+<li>I have a problems with mask input, I can&#39;t input Ukraine phone +380(XX)XXX-XX-XX #1050</li>
+<li>you can&#39;t write ukraine number to phone field +380999999999 #1019</li>
+<li>autoUnmask not work in newest release #1109</li>
+<li>Definition {_} throws an exception #1106 =&gt; update readme</li>
+<li>Uncaught TypeError for &quot;percentage&quot; alias #1108</li>
+<li>Wrong behavior for symbol delete in ip alias #1092</li>
+<li>fix element validation for the vanilla dependencyLib #1104</li>
+</ul>
+<h2 id="-3-2-3-2015-11-09">[3.2.3] - 2015-11-09</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Inputmask.remove</li>
+<li>inputmask.binding =&gt; automated inputmask binding for html attributes</li>
+<li>Add tooltip option</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>fix bug in maskscache - context mixing</li>
+<li>allow passing multiple inputs to mask function</li>
+<li>Improve handling of compositionevents</li>
+<li>improve extendAliases, extendDefinitions, extendDefaults</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Cannot erase input value throw mask symbols (Android 4.4, Android 4.2) #1090</li>
+<li>CTRL-x / Cut issue #948</li>
+<li>Double &quot;Change&quot; action when pressing Enter in Firefox #1070</li>
+<li>upper/lower case handling in data-inputmask-* #1079</li>
+<li>IE8 Null values after submit #1076</li>
+<li>Each character repeats on Mobile #912</li>
+<li>extra tooltip property #1071</li>
+<li>Numeric aliases insert &#39;0&#39; in input after clearing if there was fraction part #1067</li>
+<li>Clear optional tail in getvalue. See #1055 #1065</li>
+</ul>
+<h2 id="-3-2-2-2015-10-07">[3.2.2] - 2015-10-07</h2>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Missing comma in bower.json and component.json #1064</li>
+</ul>
+<h2 id="-3-2-1-2015-10-07">[3.2.1] - 2015-10-07</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>inputmask.dependencyLib.jquery</li>
+<li>inputmask.dependencyLib.jqlite</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>namespace dependencyLib =&gt; inputmask.dependencyLib</li>
+<li>fix jquery.inputmask.bundle.js</li>
+<li>fix dependency paths for browserify</li>
+<li>update files to be included for package.json, bower.json, component.json</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>oncomplete not called when set with option function #1033</li>
+<li>oncompleate set value incorrect action #1039</li>
+<li>JQuery dependency #517</li>
+<li>IsValid on Optional Mask returning false #1055</li>
+<li>Focus loop on IE9 with numeric.extensions #989</li>
+<li>Currency with autogroup and no digits not working #1062</li>
+<li>field input width characters cropped while writing #1060 (regression fix)</li>
+<li>DependencyLib error in Internet Explorer #1047</li>
+<li>Dynamically switching mask in same input box not functioning as expected #1016</li>
+<li>3.2.0 Error extendDefinitions and extendAliases not functions #1024</li>
+<li>Browserify error: <code>Error: Cannot find module &#39;inputmask&#39; from &#39;/Users/.../node_modules/jquery.inputmask/dist/inputmask</code> #1030</li>
+<li>Invalid JSON phone-uk.js #1025</li>
+</ul>
+<h2 id="-3-2-0-2015-09-04">[3.2.0] - 2015-09-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>add option command to set and retrieve options on an inputmask</li>
+<li>dependencyLib wrapper around needed jQuery functionality</li>
+<li>mac address alias #986</li>
+<li>tabThrough option - Tab and autoselect mask parts #433</li>
+<li>eslint testing in grunt validate task</li>
+<li>$.fn.inputmask(&quot;setvalue&quot;, value)</li>
+<li>jquery.clone support (also see $.fn.inputmask(&quot;setvalue&quot;, value))</li>
+<li>hexadecimal definition (# in inputmask.extensions.js)</li>
+<li>positionCaretOnTab option</li>
+<li>Inputmask.unmask</li>
+<li>numeric alias - increment/decrement by ctrl-up/ctrl-down</li>
+<li>numeric alias - round values</li>
+<li>percentage alias</li>
+<li>Inputmask class</li>
+<li>setting defaults / definitions / aliases<ul>
+<li>Inputmask.extendDefaults</li>
+<li>Inputmask.extendDefinitions</li>
+<li>Inputmask.extendAliases</li>
+</ul>
+</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>enhance caret positioning behavior &amp; radicFocus</li>
+<li>change alfanumeric uppercase definition from # to &amp;</li>
+<li>numericInput option also possible on dynamic-masks</li>
+<li>remove $.inputmask in favor of Inputmask class</li>
+<li>remove &quot;jquery.&quot; in the naming of the extensions to better reflect their denpendency</li>
+<li>separate jquery plugin code from the inputmask core (first step to remove jquery dependency from the inputmask core)</li>
+<li>Update placeholder handling</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Mask cleared on ajax submit or jquery unobtrusive validation error #1020</li>
+<li>Update readme for numerics #994</li>
+<li>extra zeros in currency alias #1008</li>
+<li>masks parsing generate a Maximum call stack size exceeded #1007</li>
+<li>Issue using datamask-input attributes and event handlers #992</li>
+<li>Set specific inputmask option on already initialized control #949</li>
+<li>Money question #644</li>
+<li>Decimal numbers with fixed decimal part #990</li>
+<li>Focus loop on IE9 with numeric.extensions #989</li>
+<li>Numeric inputs with default value are setted to blank when submit the form #983</li>
+<li>Default Enter key function getting lost on an input mask text field #938</li>
+<li>Add JSHint and JSCS #879 =&gt; used eslint instead</li>
+<li>On google chrome, cannot use jquery to clone the inputmask control with data and events #713</li>
+<li>Cannot overwrite characters when highlighting the characters to the right of the decimal #974</li>
+<li>Decimal mask accepts &quot;123,456.&quot; (RadixPoint with no number after it) #973</li>
+<li>Make numericInput work with complex masks #963</li>
+<li>Auto position cursor at end of data on focus #965</li>
+<li>Decimal separator conversion #919</li>
+<li>Entering a period on a blank &#39;numeric&#39; alias input not allowed #888</li>
+<li>Typing 1000 becomes 1.00 using groupSeparator=&quot;.&quot; #959</li>
+<li>phone-codes.js is missing when installing with bower #937</li>
+<li>Repeat function doesn&#39;t work for dynamic masks #960</li>
+<li>Provide convenient method to unmask value #929</li>
+<li>Min value doesn&#39;t work with allowMinus #951</li>
+<li>Escape value is inconsistent after mask #935</li>
+<li>Escape optional marker, quantifiable marker, alternator marker and backslash not working #930</li>
+<li>Is numeric carret position broken? #928</li>
+<li>Decimal looses digits #924</li>
+<li>Firefox: cursor jumps to the right when clicking anywhere on the value #921</li>
+<li>Numeric inputMask doesn&#39;t rounds value #754</li>
+<li><strike>Chinese / Japanese characters are unable to mask #198</strike></li>
+<li><strike>Infinite Loop on IE (v11) when using Japanese IME Keyboard #749</strike></li>
+<li>Delete key not working properly #799</li>
+<li>Selecting and overwriting text will delete the character to the immediate right #914</li>
+<li>Can&#39;t delete digits after decimal point on negative numbers #892</li>
+<li>decimal : extra number after delete and typing new numbers #904</li>
+<li>Dynamic masks with {*} and zero repeats #875</li>
+<li>Mask does not alternate back after deleting digit #905</li>
+<li>never trigger &#39;input&#39; event when paste after invoke inputmask #776</li>
+<li>Script looping start when add &#39;.&#39; between decimal values #870 (&#39;.&#39; part)</li>
+</ul>
+<h2 id="-3-1-63-2015-05-04">[3.1.63] - 2015-05-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Support for CommonJS (Browserify)</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>Allow masking the text content of other html-elements (other then div)</li>
+<li>Make alternators correctly handle alternations with different lengths</li>
+<li>better determine the last required position with multiple masks</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Script looping start when add &#39;.&#39; between decimal values #870 (script loop)</li>
+<li>Static masks fails when we set value=&quot;2015&quot; for an input field where data-inputmask was &quot;2999&quot; #903</li>
+<li>contenteditable decimal #882</li>
+<li>Tab out does not work when element is readonly #884</li>
+<li>Change mask default for allowPlus and allowMinus #896</li>
+<li>Browser hangs after trying to type some additional digits at the start of a date field #876</li>
+<li>inputmask decimal with integerDigits or digits with maxlength can cause Browser freezed #889</li>
+<li>masking a password field #821 (reenable type=password)</li>
+<li>email inputmask &quot;isComplete&quot; always returns true #855</li>
+<li>When two masks specified backspace clears the whole input instead of last char #780</li>
+<li>Phone extention backspace problem #454</li>
+</ul>
+<h2 id="-3-1-62-2015-03-26">[3.1.62] - 2015-03-26</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Numeric alias: add unmaskAsNumber option</li>
+<li>import russian phone codes from inputmask-multi</li>
+<li>enable masking the text content in a div</li>
+<li>enable contenteditable elements for inputmask</li>
+<li>Update Command object to handle inserts and allow for multiple removes</li>
+<li>Add a change log</li>
+<li>Add Component package manager support - component.json</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>updating a value on onincomplete event doesn&#39;t work #955</li>
+<li>$.inputmask.isValid(&quot;1A&quot;, { mask : &quot;1A&quot; }) returns false #858</li>
+<li>IE8 doesn&#39;t support window.getSelection js error #853</li>
+<li>Email with dot - paste not working #847</li>
+<li>Standard phone numbers in Brazil #836 (Part 1)</li>
+<li>Sequentional optional parts do not fully match #699</li>
+<li>How i fix that number problem? #835</li>
+<li>Form reset doesn&#39;t get same value as initial mask #842</li>
+<li>Numeric extension doesn&#39;t seem to support min/max values #830</li>
+<li>Numeric max filter #837</li>
+<li>Mask cache - 2 definitions for same mask #831</li>
+<li>Adding parentheses as a negative format for Decimal and Integer aliases (100) #451</li>
+<li>Should not allow &quot;-&quot; or &quot;+&quot; as numbers #815</li>
+<li>isComplete erroneously returning false when backspacing with an optional mask #824</li>
+</ul>
+<h2 id="-3-1-61-2015-02-05">[3.1.61] - 2015-02-05</h2>
+<p>Initial start of a changelog</p>
+<p>See commits for previous history.</p>
+
+      </body>
+    </html>
